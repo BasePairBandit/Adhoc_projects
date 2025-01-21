@@ -222,7 +222,7 @@ print(uniques)
 coordinates = (1,2,3)
 x,y,z = coordinates
 print(x)
-"""
+
 #Each key should be unqiue in a dictionary
 
 Phone_number = input("Phone :")
@@ -237,5 +237,74 @@ for x in Phone_number:
     Output += Numbers.get(x,"!") + " "
 print(Output)
 
+message = input(">")
+words = message.split(' ')
+emojis = {
+    ":)":"😊",
+    ":(":"😒"
+}
+output = ""
+for words in words:
+    emojis.get(words,words)
+    output+=emojis.get(words,words)
+print(output)
+
+#Function is a container for a few lines of code that perform a specific task.
+def greet_user ():
+    print("Hi there!")
+    print("Welcome abroad")
+
+
+print("Start")
+greet_user()
+print("Finish")
+
+#Passing info to the function
+def greet_user (first_name,last_name):
+    print(f"Hi {first_name} {last_name}!")
+    print("Welcome abroad")
+
+
+print("Start")
+greet_user("John","Drury")
+#calc_cost(total=50,shipping=5,discount=0.1) # use key word arguments to make it clear. Always use positional arguments first and THEN keyword arguments.
+print("Finish")
+
+#Return values
+
+def square(number):
+    print(number*number)
+    return (number)
+square(3)
+
+#Assignment - Emoticon generator
+
+def icon_generator (message):
+    words = message.split(" ")
+    emojis = {
+        ":)": "😊",
+        ":(": "😒"
+    }
+    output = ""
+    for words in words:
+        output += emojis.get(words, words) + " "
+    return output
+
+
+message = input(">")
+result = icon_generator(message)
+print(result)
+
+#Exception
+
+try:
+    age = int(input("Age:"))
+    income = 20000
+    risk = income/age
+    print(age)
+except ZeroDivisionError:
+    print("Age cannot be 0")
+except ValueError:
+    print("Invalid value")"""
 
 
